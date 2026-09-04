@@ -1,0 +1,6 @@
+# Axiomleaf – https://axiomleaf.qzz.io
+User-agent: *
+Allow: /
+Disallow: /404
+
+Sitemap: https://axiomleaf.qzz.io/sitemap.xml

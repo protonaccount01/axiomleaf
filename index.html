@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── Primary SEO (overridden per-route by src/components/seo/SEO.tsx) ── -->
+    <title>Axiomleaf – Free Browser Tools, Honest Writing, Zero Clutter</title>
+    <meta
+      name="description"
+      content="Axiomleaf offers 45+ free online tools that run entirely in your browser – word counter, JSON formatter, password generator, converters, calculators – plus a blog on technology and productivity."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#16a34a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="author" content="Axiomleaf" />
+    <link rel="canonical" href="https://axiomleaf.qzz.io/" />
+
+    <!-- ── Open Graph / Twitter defaults ── -->
+    <meta property="og:site_name" content="Axiomleaf" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Axiomleaf – Free Browser Tools, Honest Writing, Zero Clutter" />
+    <meta property="og:description" content="45+ free, privacy-first tools that run in your browser, plus a blog on technology and productivity." />
+    <meta property="og:url" content="https://axiomleaf.qzz.io/" />
+    <meta property="og:image" content="https://axiomleaf.qzz.io/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- ── Icons / PWA ── -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ── Security (defence in depth; primary headers live in public/_headers) ── -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
+    <!-- Google AdSense: paste your <script async src="https://pagead2.googlesyndication.com/..."> tag here after approval -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="font-family: system-ui; padding: 2rem; text-align: center">
+        <h1>Axiomleaf</h1>
+        <p>Axiomleaf's tools run in your browser and need JavaScript enabled. Please enable JavaScript and reload.</p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

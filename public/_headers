@@ -1,0 +1,26 @@
+# ─────────────────────────────────────────────────────────────
+# Cloudflare Pages security headers (applied at the edge).
+# GitHub Pages ignores this file – use Cloudflare in front of it
+# or accept the <meta> fallbacks in index.html.
+# NOTE: 'unsafe-inline' for script-src is required ONLY because
+# vite-plugin-singlefile inlines the JS bundle. If you remove that
+# plugin from vite.config.ts you can drop it. AdSense also requires
+# the googlesyndication / doubleclick origins listed below.
+# ─────────────────────────────────────────────────────────────
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.doubleclick.net https://www.googletagmanager.com https://fundingchoicesmessages.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https://www.googleapis.com https://*.google.com https://*.googlesyndication.com https://*.doubleclick.net https://*.g.doubleclick.net; frame-src https://*.googlesyndication.com https://*.doubleclick.net https://www.google.com https://fundingchoicesmessages.google.com; media-src 'self' data: blob:; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; upgrade-insecure-requests
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/sitemap.xml
+  Content-Type: application/xml
+
+/robots.txt
+  Cache-Control: public, max-age=3600

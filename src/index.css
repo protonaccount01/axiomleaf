@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   AXIOMLEAF DESIGN TOKENS
+   Brand palette: leaf green, white, and near-black.
+   Everything is defined via Tailwind v4 @theme so
+   utilities like `bg-leaf-500` or `text-ink` work.
+   ───────────────────────────────────────────── */
+@theme {
+  --color-leaf-50: #f0fdf4;
+  --color-leaf-100: #dcfce7;
+  --color-leaf-200: #bbf7d0;
+  --color-leaf-300: #86efac;
+  --color-leaf-400: #4ade80;
+  --color-leaf-500: #22c55e;
+  --color-leaf-600: #16a34a;
+  --color-leaf-700: #15803d;
+  --color-leaf-800: #166534;
+  --color-leaf-900: #14532d;
+
+  --color-ink: #0b0f0d;
+  --color-ink-soft: #151b18;
+  --color-ink-muted: #3f4a44;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  --shadow-soft: 0 1px 2px rgb(11 15 13 / 0.04), 0 8px 24px -12px rgb(11 15 13 / 0.12);
+  --shadow-glow: 0 0 0 1px rgb(34 197 94 / 0.25), 0 12px 40px -12px rgb(34 197 94 / 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-white text-ink antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+  background: #bbf7d0;
+  color: #0b0f0d;
+}
+
+/* Focus ring that matches the brand */
+:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reusable component classes ------------------------------------ */
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply rounded-2xl border border-ink/10 bg-white shadow-soft;
+  }
+  .input {
+    @apply w-full rounded-xl border border-ink/15 bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-ink/40 transition focus:border-leaf-500 focus:ring-4 focus:ring-leaf-500/15 focus:outline-none;
+  }
+  .textarea {
+    @apply w-full rounded-xl border border-ink/15 bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-ink/40 transition focus:border-leaf-500 focus:ring-4 focus:ring-leaf-500/15 focus:outline-none min-h-40 resize-y font-mono text-[13px] leading-relaxed;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition select-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition select-none disabled:cursor-not-allowed disabled:opacity-50 bg-leaf-600 text-white hover:bg-leaf-700 active:bg-leaf-800 shadow-sm;
+  }
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition select-none disabled:cursor-not-allowed disabled:opacity-50 bg-ink text-white hover:bg-ink-soft;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition select-none disabled:cursor-not-allowed disabled:opacity-50 border border-ink/15 bg-white text-ink hover:border-leaf-500 hover:text-leaf-700;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full bg-leaf-100 px-2.5 py-0.5 text-xs font-medium text-leaf-800;
+  }
+  .prose-ax {
+    @apply text-[15px] leading-7 text-ink/80;
+  }
+  .prose-ax h2 {
+    @apply mt-10 mb-3 text-2xl font-bold tracking-tight text-ink;
+  }
+  .prose-ax h3 {
+    @apply mt-8 mb-2 text-lg font-semibold text-ink;
+  }
+  .prose-ax p {
+    @apply my-4;
+  }
+  .prose-ax ul {
+    @apply my-4 list-disc space-y-1.5 pl-6;
+  }
+  .prose-ax ol {
+    @apply my-4 list-decimal space-y-1.5 pl-6;
+  }
+  .prose-ax a {
+    @apply font-medium text-leaf-700 underline decoration-leaf-300 underline-offset-2 hover:decoration-leaf-600;
+  }
+  .prose-ax img {
+    @apply my-6 h-auto max-w-full rounded-xl;
+  }
+  .prose-ax pre {
+    @apply my-4 overflow-x-auto rounded-xl bg-ink p-4 text-[13px] text-leaf-100;
+  }
+  .prose-ax code {
+    @apply rounded bg-leaf-50 px-1.5 py-0.5 font-mono text-[13px] text-leaf-800;
+  }
+  .prose-ax pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+  .prose-ax blockquote {
+    @apply my-6 border-l-4 border-leaf-500 pl-4 italic text-ink/70;
+  }
+  .prose-ax table {
+    @apply my-6 w-full border-collapse text-sm;
+  }
+  .prose-ax th,
+  .prose-ax td {
+    @apply border border-ink/10 px-3 py-2 text-left;
+  }
+}
+
+/* Subtle grid backdrop used in hero */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(11 15 13 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(11 15 13 / 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
