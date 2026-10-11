@@ -2,7 +2,7 @@
 
 > Free, privacy-first browser tools + a Blogger-powered blog. Built with **React 19, TypeScript, Vite 7 and Tailwind CSS v4**. No backend, no database, no tracking – deployable for free on Cloudflare Pages or GitHub Pages.
 
-**Live URL:** https://axiomleaf.qzz.io  **Repo:** https://github.com/a1cva1/axioml
+**Live URL:** https://axiomleaf.pages.dev  **Repo:** https://github.com/a1cva1/axioml
 
 ---
 
