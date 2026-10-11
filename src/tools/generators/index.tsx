@@ -51,7 +51,7 @@ export function PasswordGenerator() {
 
 /* ─── QR Code Generator ─── */
 export function QrGenerator() {
-  const [text, setText] = useState("https://axiomleaf.qzz.io");
+  const [text, setText] = useState("https://axiomleaf.pages.dev");
   const [size, setSize] = useState(256);
   const [dataUrl, setDataUrl] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
