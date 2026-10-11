@@ -12,7 +12,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const SITE_URL = process.env.VITE_SITE_URL?.replace(/\/$/, "") || "https://axiomleaf.qzz.io";
+const SITE_URL = process.env.VITE_SITE_URL?.replace(/\/$/, "") || "https://axiomleaf.pages.dev";
 
 // Static pages: [path, changefreq, priority]
 const STATIC = [
@@ -43,4 +43,8 @@ const entries = [
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join("\n")}\n</urlset>\n`;
 writeFileSync(resolve(root, "public/sitemap.xml"), xml.replace(/&/g, "&amp;"));
+writeFileSync(
+  resolve(root, "public/robots.txt"),
+  `# Axiomleaf – ${SITE_URL}\nUser-agent: *\nAllow: /\nDisallow: /404\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
+);
 console.log(`✔ sitemap.xml written with ${entries.length} URLs (${toolSlugs.length} tools)`);
