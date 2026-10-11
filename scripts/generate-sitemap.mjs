@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generates public/sitemap.xml from the static route list + tool registry.
+ *  Generates public/sitemap.xml from the static route list + tool registry.
  *
  * Usage:  node scripts/generate-sitemap.mjs
  * Run it whenever you add a tool or page, then commit the result.
