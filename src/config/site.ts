@@ -17,12 +17,12 @@ export const SITE = {
   description:
     "Axiomleaf is a fast, privacy-first platform offering 35+ free online tools that run entirely in your browser, plus in-depth articles on technology, productivity and the web.",
   /** Production URL – used for canonical links, sitemap and Open Graph. */
-  url: (import.meta.env.VITE_SITE_URL as string | undefined) ?? "https://axiomleaf.qzz.io",
+  url: (import.meta.env.VITE_SITE_URL as string | undefined) ?? "https://axiomleaf.pages.dev",
   /** Default social share image (place your own in /public). */
   ogImage: "/og-image.png",
   locale: "en_US",
   author: "Axiomleaf Team",
-  email: "hello@axiomleaf.qzz.io",
+  email: "contact@axiomleaf.cc.cd",
   foundedYear: 2024,
   social: {
     github: "https://github.com/a1cva1",
