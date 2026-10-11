@@ -2,7 +2,7 @@
 /**
  *  Generates public/sitemap.xml from the static route list + tool registry.
  *
- * Usage:  node scripts/generate-sitemap.mjs
+ * Usage: node scripts/generate-sitemap.mjs
  * Run it whenever you add a tool or page, then commit the result.
  * (Blog posts live on Blogger, which publishes its own sitemap – submit
  *  both sitemaps in Google Search Console.)
