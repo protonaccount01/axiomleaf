@@ -26,9 +26,21 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- ── Icons / PWA ── -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ── Site name for Google (static on purpose, not injected by JS) ── -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Axiomleaf",
+        "alternateName": ["Axiomleaf Tools"],
+        "url": "__SITE_URL__/"
+      }
+    </script>
 
     <!-- ── Security (defence in depth; primary headers live in public/_headers) ── -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
