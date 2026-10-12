@@ -10,14 +10,14 @@ import { cn } from "@/utils/cn";
 export function Logo({ className, size = 32 }: { className?: string; size?: number }) {
   return (
     <span className={cn("inline-flex items-center gap-2 font-bold tracking-tight text-ink", className)}>
-      <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <rect width="48" height="48" rx="12" fill="#0b0f0d" />
-        <path
-          d="M14 33c0-11 7-18 20-19-1 13-8 20-20 19Z"
-          fill="#22c55e"
-        />
-        <path d="M14 33c5-6 10-11 17-15" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
-      </svg>
+      <img
+        src="/logo.png"
+        width={size}
+        height={size}
+        alt=""
+        aria-hidden="true"
+        className="shrink-0 rounded-full object-cover"
+      />
       <span>
         Axiom<span className="text-leaf-600">leaf</span>
       </span>
