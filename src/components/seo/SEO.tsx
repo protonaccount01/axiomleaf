@@ -102,7 +102,7 @@ export const organizationJsonLd = () => ({
   "@type": "Organization",
   name: SITE.name,
   url: SITE.url,
-  logo: `${SITE.url}/logo.svg`,
+  logo: `${SITE.url}/logo.png`,
   email: SITE.email,
   sameAs: Object.values(SITE.social),
 });
